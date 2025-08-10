@@ -1,136 +1,181 @@
 body {
-    background: linear-gradient(120deg, #f8fafc 0%, #e0c3fc 100%);
-    font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
     margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #fceabb 0%, #f8b500 100%);
     min-height: 100vh;
-    overflow-x: hidden;
 }
-.hearts-bg {
+.birthday-bg {
     position: fixed;
     top: 0; left: 0; width: 100vw; height: 100vh;
-    pointer-events: none;
+    background: url('https://pngimg.com/uploads/confetti/confetti_PNG87017.png') repeat;
+    opacity: 0.15;
     z-index: 0;
 }
 .container {
-    max-width: 520px;
-    margin: 80px auto;
-    background: #fff;
-    padding: 56px 40px 40px 40px;
-    border-radius: 36px;
-    box-shadow: 0 12px 40px rgba(160, 120, 200, 0.13);
-    text-align: center;
-    border: none;
     position: relative;
     z-index: 1;
-}
-.romantic {
-    color: #e17055;
-    font-size: 2.6em;
-    margin-bottom: 22px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
-}
-.message {
-    color: #5c5470;
-    font-size: 1.22em;
-    margin-bottom: 40px;
-    line-height: 1.8;
-    font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
-}
-#wishButton {
-    padding: 18px 54px;
-    font-size: 1.35em;
-    border: none;
-    border-radius: 32px;
-    background: #e17055;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(225, 112, 85, 0.13);
-    transition: background 0.3s, transform 0.2s;
-    outline: none;
-    font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
-}
-#wishButton:hover {
-    background: #fdcb6e;
-    color: #e17055;
-    transform: scale(1.07);
-}
-.wish {
-    margin-top: 40px;
-    font-size: 1.45em;
-    color: #e17055;
-    font-weight: 600;
-    min-height: 44px;
-    letter-spacing: 0.7px;
-    font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
-}
-.heart {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background: url('data:image/svg+xml;utf8,<svg fill="%23e17055" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M23.6 4.6c-2.6 0-4.9 1.7-5.6 4.1-0.7-2.4-3-4.1-5.6-4.1-3.1 0-5.6 2.5-5.6 5.6 0 7.2 11.2 15.2 11.2 15.2s11.2-8 11.2-15.2c0-3.1-2.5-5.6-5.6-5.6z"/></svg>') no-repeat center center;
-    background-size: contain;
-    opacity: 0.7;
-    pointer-events: none;
-    animation: floatHeart 6s linear infinite;
-}
-@keyframes floatHeart {
-    0% { transform: translateY(0) scale(1); opacity: 0.7; }
-    50% { transform: translateY(-60px) scale(1.2); opacity: 1; }
-    100% { transform: translateY(-120px) scale(1); opacity: 0.5; }
+    max-width: 400px;
+    margin: 60px auto;
+    background: rgba(255,255,255,0.85);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(248,181,0,0.15);
+    padding: 32px 24px;
+    text-align: center;
 }
 .header-photo {
     width: 120px;
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 18px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 2px 8px rgba(127, 83, 172, 0.10);
-    border: 4px solid #e17055;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 16px rgba(248,181,0,0.18);
 }
-.burst-heart {
-    position: fixed;
-    font-size: 2.2em;
-    pointer-events: none;
-    z-index: 9999;
-    animation: burst 1.2s cubic-bezier(.17,.67,.83,.67) forwards;
+h1 {
+    color: #f8b500;
+    margin-bottom: 12px;
 }
-@keyframes burst {
-    0% { opacity: 1; transform: scale(0.5) translateY(0); }
-    60% { opacity: 1; transform: scale(1.2) translateY(-40px); }
-    100% { opacity: 0; transform: scale(1.5) translateY(-120px); }
+h2 {
+    color: #e17055;
+    margin-bottom: 16px;
 }
-.bloom-flower {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    pointer-events: none;
-    z-index: 9999;
+p {
+    color: #444;
+    margin-bottom: 24px;
+}
+#wishButton {
+    background: linear-gradient(90deg, #f8b500 60%, #e17055 100%);
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 32px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(248,181,0,0.12);
+    transition: background 0.3s, transform 0.2s;
+}
+#wishButton:hover {
+    background: linear-gradient(90deg, #e17055 60%, #f8b500 100%);
+    transform: scale(1.05);
+}
+.wish {
+    margin-top: 24px;
+    font-size: 1.2em;
+    color: #e17055;
     opacity: 0;
-    transform: scale(0.5);
-    animation: bloom 1.2s cubic-bezier(.17,.67,.83,.67) forwards;
+    transition: opacity 0.7s;
 }
-@keyframes bloom {
-    0% { opacity: 0; transform: scale(0.5); }
-    60% { opacity: 1; transform: scale(1.2); }
-    100% { opacity: 0.7; transform: scale(1.5); }
+.wish.show {
+    opacity: 1;
+    animation: pop 0.7s;
 }
-.bloom-flower-real {
+@keyframes pop {
+    0% { transform: scale(0.7); }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.gate-intro {
     position: fixed;
-    width: 44px;
-    height: 44px;
-    pointer-events: none;
     z-index: 9999;
-    opacity: 0;
-    transform: scale(0.5);
-    animation: bloom-real 1.4s cubic-bezier(.17,.67,.83,.67) forwards;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: linear-gradient(180deg, #e0eafc 0%, #fffbe6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 1s;
 }
-@keyframes bloom-real {
-    0% { opacity: 0; transform: scale(0.5); }
-    60% { opacity: 1; transform: scale(1.2); }
-    100% { opacity: 0.8; transform: scale(1.5); }
+.gate-bg {
+    position: absolute;
+    width: 100vw; height: 100vh;
+    background: url('https://pngimg.com/uploads/cloud/cloud_PNG16.png') repeat-x center top;
+    opacity: 0.3;
+    z-index: 1;
+}
+.gate-panel {
+    position: absolute;
+    top: 0; width: 50vw; height: 100vh;
+    background: linear-gradient(120deg, #fffbe6 80%, #e0eafc 100%);
+    box-shadow: 0 0 40px 10px #fffbe6;
+    z-index: 2;
+    transition: transform 1.2s cubic-bezier(.77,0,.18,1);
+    border-radius: 0 40px 40px 0;
+}
+.gate-panel.left {
+    left: 0;
+    border-radius: 0 80px 80px 0;
+}
+.gate-panel.right {
+    right: 0;
+    border-radius: 80px 0 0 80px;
+}
+.gate-message {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: #e17055;
+    font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+    background: rgba(255,255,255,0.7);
+    padding: 40px 60px;
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(224, 234, 252, 0.2);
+}
+.gate-message h1 {
+    font-size: 2.6em;
+    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.gate-message p {
+    font-size: 1.4em;
+    margin-bottom: 0;
+    animation: pulse 1.2s infinite;
+}
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+.gate-intro.gate-open {
+    opacity: 0;
+    pointer-events: none;
+}
+.gate-intro.gate-open .gate-panel.left {
+    transform: translateX(-100vw);
+}
+.gate-intro.gate-open .gate-panel.right {
+    transform: translateX(100vw);
+}
+.gate-intro.gate-open .gate-message {
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    margin: 60px auto;
+    background: rgba(255,255,255,0.92);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(248,181,0,0.15);
+    padding: 32px 24px;
+    text-align: center;
+    border: 4px solid #f8b500; /* Add a golden border */
+}
+
+#wishButton {
+    background: linear-gradient(90deg, #f8b500 60%, #e17055 100%);
+    color: #fff;
+    border: 2px solid #e17055; /* Add a border to the button */
+    border-radius: 24px;
+    padding: 12px 32px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(248,181,0,0.12);
+    transition: background 0.3s, transform 0.2s, border 0.2s;
+}
+
+#wishButton:hover {
+    background: linear-gradient(90deg, #e17055 60%, #f8b500 100%);
+    transform: scale(1.05);
+    border-color: #f8b500;
 }
